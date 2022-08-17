@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "hello.agd.proto";
+
+package hello;
+
+service Greeter {
+  rpc Greet (Empty) returns (Greeting) {}
+}
+
+message Empty {
+
+}
+
+message Greeting {
+  string text = 1;
+}
